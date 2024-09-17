@@ -1,5 +1,7 @@
 rkdeveloptool gives you a simple way to read/write rockusb device.let's start.
 
+For ubuntu:
+
 compile and install
 1 install libusb and libudev
 	sudo apt-get install libudev-dev libusb-1.0-0-dev dh-autoreconf
@@ -10,6 +12,15 @@ compile and install
 5.automake --add-missing
 4 ./configure
 5 make
+
+For macos:
+
+1. brew install automake autoconf libusb
+2. go into root of rkdeveloptool
+3. autoreconf -i
+4. ./configure
+5. add "-Wno-deprecated-declarations" to CXX and CXXCPP in Makefile
+5. make
 
 rkdeveloptool usage,input "rkdeveloptool -h" to see
 
